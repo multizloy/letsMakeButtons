@@ -13,7 +13,7 @@ screen = pygame.display.set_mode((width, height))
 
 font = pygame.font.SysFont("Arial", 40)
 
-object = []
+objects = []
 
 
 class Button:
@@ -40,3 +40,10 @@ class Button:
             "hover": "#666666",
             "pressed": "#333333",
         }
+
+        self.button_surface = pygame.Surface((self.width, self.height))
+        self.button_rect = pygame.Rect(self.x, self.y, self.width, self.height)
+
+        self.button_surf = font.render(button_text, True, (20, 20, 20))
+
+        objects.append(self)
