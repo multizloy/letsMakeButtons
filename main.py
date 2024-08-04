@@ -71,3 +71,11 @@ class Button:
             ],
         )
         screen.blit(self.button_surface, self.button_rect)
+
+
+def my_Function():
+    print("Button Pressed")
+
+
+Button(30, 30, 400, 100, "Button One (onePress)", my_Function)
+Button(30, 140, 400, 100, "Button Two (multiPress)", my_Function, True)
