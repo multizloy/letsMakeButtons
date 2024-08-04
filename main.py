@@ -79,3 +79,15 @@ def my_Function():
 
 Button(30, 30, 400, 100, "Button One (onePress)", my_Function)
 Button(30, 140, 400, 100, "Button Two (multiPress)", my_Function, True)
+
+while True:
+    screen.fill((20, 20, 20))
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+
+    for object in objects:
+        object.process()
+    pygame.display.flip()
+    fps_Clock.tick(fps)
